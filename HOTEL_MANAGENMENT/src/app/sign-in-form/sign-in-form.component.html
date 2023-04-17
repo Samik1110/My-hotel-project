@@ -1,0 +1,22 @@
+<p>sign-in-form works!</p>
+<button mat-raised-button color="accent" (click)="OnClickJourney6()">Back</button><br>
+<mat-form-field>
+    <mat-label> Email Id</mat-label>
+    <input matInput type="email" formControlName="email">
+</mat-form-field><br>
+
+
+<mat-form-field>
+    <mat-label> Password </mat-label>
+    <input matInput type="text" formControlName="Password">
+</mat-form-field><br>
+
+<button mat-raised-button color="warn"(click)="submit()">Submit</button>
+
+<router-outlet> </router-outlet>
+<a routerLink="landing"></a>  
+    <mat-form-field class="example-full-width">
+      <mat-label>Search Your Favorite Hotel</mat-label>
+      <input matInput placeholder="ROYAL HOTEL" value="ANY">
+    </mat-form-field>
+      

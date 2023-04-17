@@ -1,0 +1,11 @@
+.img{
+    background-image:url("../../assets/images/hotel booking img.jpg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background: cover;
+
+    
+}
