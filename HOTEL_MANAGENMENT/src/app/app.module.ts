@@ -7,7 +7,6 @@ import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MAT_FORM_FIELD } from '@angular/material/form-field';
 import { SignInFormComponent } from './sign-in-form/sign-in-form.component';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
-import { BackButtonComponent } from './back-button/back-button.component';
 import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({

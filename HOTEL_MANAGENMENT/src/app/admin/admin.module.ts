@@ -7,6 +7,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { MatLabel } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 @NgModule({
   declarations: [

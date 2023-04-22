@@ -1,6 +1,5 @@
-<p>sign-in-form works!</p>
-<button mat-raised-button color="accent" (click)="OnClickJourney6()">Back</button><br>
-<mat-form-field>
+  <!-- <p>sign-in-form works!</p>  -->
+<!-- <mat-form-field>
     <mat-label> Email Id</mat-label>
     <input matInput type="email" formControlName="email">
 </mat-form-field><br>
@@ -11,12 +10,97 @@
     <input matInput type="text" formControlName="Password">
 </mat-form-field><br>
 
-<button mat-raised-button color="warn"(click)="submit()">Submit</button>
+<button mat-raised-button color="warn"(click)="submit()">Submit</button>  -->
 
 <router-outlet> </router-outlet>
 <a routerLink="landing"></a>  
     <mat-form-field class="example-full-width">
       <mat-label>Search Your Favorite Hotel</mat-label>
-      <input matInput placeholder="ROYAL HOTEL" value="ANY">
+      <input matInput placeholder="ROYAL HOTEL" value="">
+    </mat-form-field> -->
+<!-- <div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top:20px">
+            <div class="row2">
+                <div class="container-text-center">
+                     <img src=".//..//..//assets/images/login here.jpg"> 
+                </div>>
+<h1 class="text-center"> LOGIN FORM!! </h1>
+<form action="">
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label User Name></mat-label>
+        <input type="text" required matInput placeholder="Enter here">
+        <mat-error> valid user name </mat-error>
     </mat-form-field>
-      
+<br> <br>
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label User Password></mat-label>
+        <input type="password" required matInput placeholder="Enter here">
+        <mat-error>enter valid password </mat-error>
+    </mat-form-field>
+
+    <div class="container text-center">
+        <button mat-raised-button color="primary" type="submit">LOGIN</button>
+    </div>
+</form>
+            </div>
+        </div>
+
+
+    </div>
+
+</div> -->
+
+
+<!-- <div class="main">
+    <h2 style="text-align: center;">Login here </h2>
+
+    <form [formGroup]="LoginForm" (ngSubmit)="loginUser()" autocomplete="off">
+      <mat-form-field class="inp">
+        <mat-label>Enter Name</mat-label><br>
+        
+        <input matInput type="text" placeholder="Enter your name">
+        <mat-error>Enter your name</mat-error>
+      </mat-form-field><br>
+
+      <mat-form-field class="inp">
+        <mat-label>Enter Password</mat-label><br>
+        <input matInput type="password" placeholder="Enter password">
+        <mat-error>enter your 8 digit password</mat-error>
+
+      </mat-form-field><br><br>
+
+        <button [disabled]="LoginForm.invalid" class="btn" mat-raised-button color="accent"
+          (click)="submit()">Sign in</button>
+          <div>Not a member?<a routerLink="/adminsignup" > Signup now  </a> </div>
+    </form>
+</div>
+<router-outlet></router-outlet> -->
+
+
+<button mat-raised-button color="warn" (click)="back()">Back</button>
+<form class="loginform" [formGroup]="loginform" autocomplete="on">
+  <h2>Login Form </h2>
+
+  <mat-form-field>
+    <mat-label>UserName</mat-label>
+    <input matInput formControlName="name">
+    <mat-error *ngIf="loginform.get('name')?.touched && loginform.get('name')?.errors?.['required']">Name is
+      Required</mat-error>
+    <mat-error *ngIf="loginform.get('name')?.errors?.['minlength']">minimun 2 charactors Required</mat-error>
+    <mat-error *ngIf="loginform.get('name')?.errors?.['pattern']">Please Enter Alphabets Only</mat-error>
+  </mat-form-field>
+  <br>
+  
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password">
+    <mat-error *ngIf="loginform.get('password')?.touched && loginform.get('password')?.errors?.['required']">Please
+      Enter Password</mat-error>
+  </mat-form-field>
+  <br>
+
+  <button mat-raised-button color="primary" [disabled]="loginform.invalid" (click)="submit()">Submit</button><br>
+  Don't have an Account?<a routerLink="/signUp">Click Here</a>
+
+</form>
